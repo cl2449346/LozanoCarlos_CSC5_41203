@@ -8,24 +8,22 @@
 #include <iomanip>
 using namespace std;
 
+const char CNVPERC=100;//Conversion to percentage
+
 //Starts Here
 int main(int argc, char** argv) {
     
     //Initialize variables    
     float ttlSales = 8.6e5;//company's total sales
-    float salsDiv = ttlSales*5.8e-1;
-   // cout<<ttlSales<< endl; // check
-   // cout<<salsDiv <<endl; // check    
+    float salsDiv = ttlSales*(5.8e1*CNVPERC);
+    //cout<<ttlSales<< endl; // check
+    //cout<<salsDiv <<endl; // check    
          
     //output statement
     cout<<"The Sales Division made $" <<setprecision(4) <<salsDiv;
     cout<<" out of $" << ttlSales << " made this year."<< endl;  
     
-    
-    
        
-    
-    
 
     return 0;
 }
