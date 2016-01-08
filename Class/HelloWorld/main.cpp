@@ -12,8 +12,6 @@ int main(int argc, char** argv) {
     
     //Output the results
     cout<<"Hello World"<<endl;
-    int dum;
-    cin>>dum;
 
     return 0;
 }
