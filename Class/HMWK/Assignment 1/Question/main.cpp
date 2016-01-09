@@ -13,9 +13,9 @@ int main(int argc, char** argv) {
     
     //Initialize variables
     float price = 1.495e1; //circuit board price
+    float profit = price * 1.35; // calculate selling price
     cout << "If the circuit board costs $"<< setprecision(4);
     cout << price << "," <<endl<< "then we need to sell the boards for "; //price
-    float profit = price * 1.35; // calculate selling price
     cout << "$" << profit << ".";
     
 
