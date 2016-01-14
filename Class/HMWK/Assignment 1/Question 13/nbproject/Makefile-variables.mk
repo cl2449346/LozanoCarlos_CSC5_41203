@@ -7,21 +7,21 @@ CND_BASEDIR=`pwd`
 CND_BUILDDIR=build
 CND_DISTDIR=dist
 # Debug configuration
-CND_PLATFORM_Debug=Cygwin-Windows
-CND_ARTIFACT_DIR_Debug=dist/Debug/Cygwin-Windows
-CND_ARTIFACT_NAME_Debug=question
-CND_ARTIFACT_PATH_Debug=dist/Debug/Cygwin-Windows/question
-CND_PACKAGE_DIR_Debug=dist/Debug/Cygwin-Windows/package
-CND_PACKAGE_NAME_Debug=question.tar
-CND_PACKAGE_PATH_Debug=dist/Debug/Cygwin-Windows/package/question.tar
+CND_PLATFORM_Debug=Cygwin_4.x-Windows
+CND_ARTIFACT_DIR_Debug=dist/Debug/Cygwin_4.x-Windows
+CND_ARTIFACT_NAME_Debug=question_13
+CND_ARTIFACT_PATH_Debug=dist/Debug/Cygwin_4.x-Windows/question_13
+CND_PACKAGE_DIR_Debug=dist/Debug/Cygwin_4.x-Windows/package
+CND_PACKAGE_NAME_Debug=question13.tar
+CND_PACKAGE_PATH_Debug=dist/Debug/Cygwin_4.x-Windows/package/question13.tar
 # Release configuration
-CND_PLATFORM_Release=Cygwin-Windows
-CND_ARTIFACT_DIR_Release=dist/Release/Cygwin-Windows
-CND_ARTIFACT_NAME_Release=question
-CND_ARTIFACT_PATH_Release=dist/Release/Cygwin-Windows/question
-CND_PACKAGE_DIR_Release=dist/Release/Cygwin-Windows/package
-CND_PACKAGE_NAME_Release=question.tar
-CND_PACKAGE_PATH_Release=dist/Release/Cygwin-Windows/package/question.tar
+CND_PLATFORM_Release=Cygwin_4.x-Windows
+CND_ARTIFACT_DIR_Release=dist/Release/Cygwin_4.x-Windows
+CND_ARTIFACT_NAME_Release=question_13
+CND_ARTIFACT_PATH_Release=dist/Release/Cygwin_4.x-Windows/question_13
+CND_PACKAGE_DIR_Release=dist/Release/Cygwin_4.x-Windows/package
+CND_PACKAGE_NAME_Release=question13.tar
+CND_PACKAGE_PATH_Release=dist/Release/Cygwin_4.x-Windows/package/question13.tar
 #
 # include compiler specific variables
 #
