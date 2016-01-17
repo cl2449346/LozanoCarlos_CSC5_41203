@@ -8,6 +8,8 @@
 //System Libraries
 #include <iostream>
 #include <iomanip>
+#include <cstdlib>
+#include <ctime>
 using namespace std;
 //User Libraries
 //Global Functions
@@ -15,32 +17,41 @@ using namespace std;
 //Execution Begins Here
 int main(int argc, char** argv) {
     
+    srand(static_cast <unsigned int>(time(0)));
+    
     //Declare variables
-    float test1, test2, test3, test4, test5; //Five tests
+    float score; //Five tests
     float avg; //Average
+    int nTests=1;//number of tests
     
     //Input test scores
-        cout<<"Enter your test scores"<<endl;
-        cout<<"First test"<<endl;
-        cin>>test1;
-        cout<<"Second test"<<endl;
-        cin>>test2;
-        cout<<"Third test"<<endl;
-        cin>>test3;
-        cout<<"Fourth test"<<endl;
-        cin>>test4;
-        cout<<"Fifth test"<<endl;
-        cin>>test5;
-    
+    do
+    {
+        float sum;
+        cout<<"Enter your scores for test "<<nTests<<" (0-10)"<<endl;
+        cin>>score;    
+        sum += score;
         
-    //Calculate the average
-    float sum=test1+test2+test3+test4+test5;
-    avg=sum/5;
-    
-    //output result
-    cout<<"----------------------"<<endl;
+        //calculate average
+        if(score>10)
+            {
+                cout<<"Invalid Score Run Again"<<endl;
+                break;//Exit
+            }
+                else {
+                nTests++;//Continue and increase number of test
+            }           
+        
+        avg=sum/5; //Calculate average
+       
+        
+        
+                
+    }while(nTests<=5);
+    {cout<<"----------------------"<<endl;
     cout<<"Your average test score is: "<<setprecision(1)<<fixed
             <<showpoint<<avg;
+        }
     
 
     return 0;
