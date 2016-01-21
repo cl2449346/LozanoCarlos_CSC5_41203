@@ -40,7 +40,7 @@ int main(int argc, char** argv) {
             case 1:{
                 //The problem to solve
                 cout<<endl<<"Solution to Savitch 8thed chap3 prob12"<<endl;
-                cout<<endl<<"The approximation of PI"<<endl;
+                cout<<endl<<endl<<"The approximation of PI"<<endl;
                 //Declare and initialize variables for apprxPI
                 float apprxPI=1;    //Approximate value of PI
                 unsigned int nTerms;//Number of terms
