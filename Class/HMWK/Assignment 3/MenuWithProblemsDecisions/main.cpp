@@ -33,6 +33,7 @@ int main(int argc, char** argv) {
         cout<<"Type 2 to display Gaddis 8thEd Chap 3 "<<endl;
         cout<<"Type 3 to display Gaddis 8thEd Chap4 Prob1"<<endl;
         cout<<"Type 4 to display Gaddis 8thEd Chap 4 Prob2"<<endl;
+        cout<<"Type 5 to display Gaddis 8thEd Chap 4 Prob 3"<<endl;
         cout<<"Type anything else to exit"<<endl;
         cin>>nSoltn;
         cout<<"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"<<endl;
@@ -43,6 +44,8 @@ int main(int argc, char** argv) {
                 //The problem to solve
                 cout<<endl<<"Solution to Savitch 8thed chap3 prob12"<<endl;
                 cout<<endl<<endl<<"The approximation of PI"<<endl;
+                cout<<"--------------------------------"<<endl;
+                
                 //Declare and initialize variables for apprxPI
                 float apprxPI=1;    //Approximate value of PI
                 unsigned int nTerms;//Number of terms
@@ -68,6 +71,8 @@ int main(int argc, char** argv) {
             case 2:{
                 cout<<endl<<"Solution to Gaddis 8thEd Chap 4 Prob7"<<endl<<endl;
                 cout<<endl<<"The Calculation of time"<<endl<<endl;
+                cout<<"--------------------------------"<<endl;
+                
                 //Declare and initialize variables
                 unsigned int seconds;   //Number of seconds
                 unsigned int minutes;   //Number of minutes
@@ -127,6 +132,7 @@ int main(int argc, char** argv) {
                 //Problem to solve
                 cout<<endl<<"Solution to Gaddis 8thEd Chap 4 Prob2"<<endl<<endl;
                 cout<<endl<<"Roman Numeral Converter"<<endl<<endl;
+                cout<<"--------------------------------"<<endl;
 
                 //Initialize and declare variables
                 unsigned short number;  //Number to be converted
@@ -203,6 +209,31 @@ int main(int argc, char** argv) {
                     }
                 }
             }
+            
+            case 5:{
+                cout<<endl<<"Solution to Gaddis 8thEd Chap4 Prob3"<<endl;
+                cout<<endl<<"Magic Date"<<endl;
+                cout<<"--------------------------------"<<endl;
+                
+                //Initialize and declare variables
+                int month, day, year, magcDt;   //The date and magic date
+
+                //Input the date
+                cout<<"Is your date magic?"<<endl;
+                cout<<"Enter a month in numeric from (m)"<<endl;
+                cin>>month;
+                cout<<"Enter a day"<<endl;
+                cin>>day;
+                cout<<"Enter a two digit year"<<endl;
+                cin>>year;
+
+                //calculate magic date
+                magcDt=month*day;
+                if(magcDt=year){
+                    cout<<"This date is magic"<<endl;
+                }
+                else(cout<<"this date is not magic");
+                }
                                 
             default:{
                 cout<<endl<<"Exiting the program"<<endl;
