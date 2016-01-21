@@ -31,6 +31,8 @@ int main(int argc, char** argv) {
         cout<<"Assignment 3 problem set"<<endl;
         cout<<"Type 1 to display Savitch 8thEd Chap3 Prob12"<<endl;
         cout<<"Type 2 to display Gaddis 8thEd Chap 3 "<<endl;
+        cout<<"Type 3 to display Gaddis 8thEd Chap4 Prob1"<<endl;
+        cout<<"Type 4 to display Gaddis 8thEd Chap 4 Prob2"<<endl;
         cout<<"Type anything else to exit"<<endl;
         cin>>nSoltn;
         cout<<"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"<<endl;
@@ -99,13 +101,114 @@ int main(int argc, char** argv) {
                     }
                     else{
                         cout<<"You only entered "<<seconds<<" seconds"<<endl;
-                        break;}
+                    }
+            }break;
+            
+            case 3:{
+                cout<<endl<<"Solution to Gaddis 8thEd Chap4 Prob1"<<endl;
+                cout<<endl<<"A Tail of Two Numbers"<<endl;
+                cout<<"--------------------------------"<<endl;
+
+                //Initialize variables
+                int num1, num2; //Two numbers that will be entered
+
+                //Input variables
+                cout<<"Enter the first number: ";
+                cin>>num1;
+                cout<<"Enter the second number: ";
+                cin>>num2;
+
+                //Output which number is smaller and which is larger
+                cout<<endl<<"The smaller number is: "<<(num1<num2?num1:num2)<<endl;
+                cout<<"The larger number is: "<<(num1>num2?num1:num2)<<endl;
+                       }break;
+                       
+            case 4:{
+                //Problem to solve
+                cout<<endl<<"Solution to Gaddis 8thEd Chap 4 Prob2"<<endl<<endl;
+                cout<<endl<<"Roman Numeral Converter"<<endl<<endl;
+
+                //Initialize and declare variables
+                unsigned short number;  //Number to be converted
+                bool endgame=true;      //Exit program when false
+
+                //Input
+                cout<<"Input a number between 1 and 10: "<<endl;
+                cin>>number;
+
+                //Output roman numberal
+                switch(number){
+                        case 1:{
+                            //For number 1
+                            cout<<"The Roman Numeral for 1 is i"<<endl;
+                        break;
+                        }
+
+                        case 2:{
+                            //For number 2
+                            cout<<"The Roman Numeral for 2 is ii"<<endl;
+                            break;
+                        }
+
+                        case 3:{
+                            //For number 3
+                            cout<<"The Roman Numeral for 3 is iii"<<endl;
+                            break;
+                        }
+
+                        case 4:{
+                            //For number 4
+                            cout<<"The Roman Numeral for 4 is iv"<<endl;
+                            break;
+                        }
+
+                        case 5:{
+                            //For number 4
+                            cout<<"The Roman Numeral for 5 is v"<<endl;
+                            break;
+                        }
+
+                        case 6:{
+                            //For number 4
+                            cout<<"The Roman Numeral for 6 is vi"<<endl;
+                            break;
+                        }
+
+                        case 7:{
+                            //For number 4
+                            cout<<"The Roman Numeral for 7 is vii"<<endl;
+                            break;
+                        }
+
+                        case 8:{
+                            //For number 4
+                            cout<<"The Roman Numeral for 8 is viii"<<endl;
+                            break;
+                        }
+
+                        case 9:{
+                            //For number 4
+                            cout<<"The Roman Numeral for 9 is ix"<<endl;
+                            break;
+                        }
+
+                        case 10:{
+                            //For number 4
+                            cout<<"The Roman Numeral for 4 is x"<<endl;
+                            break;
+                        }
+                    default:{
+                        cout<<"Invalid Number"<<endl;
+                        endgame=false;
+                    }
                 }
+            }
+                                
             default:{
-                cout<<"Exiting the program"<<endl;
+                cout<<endl<<"Exiting the program"<<endl;
                 endgame=false;
             }
-    }
+        }
     }while(endgame);
     
 
