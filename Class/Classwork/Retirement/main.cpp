@@ -39,9 +39,10 @@ int main(int argc, char** argv) {
     //Calculate the savings
     for(int y=0,year=2018;y<=50;y++,year++){
         intErnd=savings*invRate;
-        cout<<setw(4)<<y<<" "<<year<<setw(11)<<savings
-                <<setw(10)<<intErnd<<setw(9)<<deposit;
-        
+        cout<<setw(4)<<y<<" "<<year<<" "<<setw(11)<<savings
+                <<setw(10)<<intErnd<<setw(9)<<deposit<<endl;
+        savings*=(1+invRate);
+        savings+=deposit;
     }
     
 
