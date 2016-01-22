@@ -28,15 +28,18 @@ int main(int argc, char** argv) {
     //Menu to display solution
     do{
         //Input problem to display//menu
+        cout<<"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"<<endl;
         cout<<"Assignment 3 problem set"<<endl;
         cout<<"Type 1 to display Savitch 8thEd Chap3 Prob12"<<endl;
         cout<<"Type 2 to display Gaddis 8thEd Chap 3 "<<endl;
         cout<<"Type 3 to display Gaddis 8thEd Chap4 Prob1"<<endl;
         cout<<"Type 4 to display Gaddis 8thEd Chap 4 Prob2"<<endl;
         cout<<"Type 5 to display Gaddis 8thEd Chap 4 Prob 3"<<endl;
-        cout<<"Type anything else to exit"<<endl;
+        cout<<"Type 6 to display Gaddis 8thEd Chap4 Prob4"<<endl;
+        cout<<"Type 7 to display Gaddis 8thEd chap4 prob9"<<endl;
+        cout<<"Type anything else to exit:";
         cin>>nSoltn;
-        cout<<"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"<<endl;
+        cout<<endl<<"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"<<endl;
         
     //Solutions to all the problems
     switch(nSoltn){
@@ -66,6 +69,12 @@ int main(int argc, char** argv) {
             cout<<"The exact value of PI= "<<PI<<endl;
             cout<<"The number of terms it took to approx PI="<<nTerms<<endl;
             cout<<"The approx value of PI= "<<apprxPI<<endl<<endl;
+            
+            //to exit problem
+            cout<<"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"<<endl;
+            cout<<"Exit problem and return to main menu?(y/n)"<<endl;
+            cin>>endgame;
+            cout<<"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"<<endl;
         }break;
 
         case 2:{
@@ -101,12 +110,19 @@ int main(int argc, char** argv) {
                 }
                 else if(seconds>=86400)
                 {
-                    cout<<"You entered: "<<days<<" Days and "<<hours<<" Hours and "<<
-                            minutes<<" Minutes and "<<seconds%60<<" Seconds"<<endl;
+                    cout<<"You entered: "<<days<<" Days and "<<hours
+                            <<" Hours and "<<minutes<<" Minutes and "
+                            <<seconds%60<<" Seconds"<<endl;
                 }
                 else{
                     cout<<"You only entered "<<seconds<<" seconds"<<endl;
                 }
+            
+            //to exit problem
+            cout<<"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"<<endl;
+            cout<<"Exit problem and return to main menu?(y/n)"<<endl;
+            cin>>endgame;
+            cout<<"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"<<endl;
         }break;
 
         case 3:{
@@ -126,6 +142,12 @@ int main(int argc, char** argv) {
             //Output which number is smaller and which is larger
             cout<<endl<<"The smaller number is: "<<(num1<num2?num1:num2)<<endl;
             cout<<"The larger number is: "<<(num1>num2?num1:num2)<<endl;
+            
+            //to exit problem
+            cout<<"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"<<endl;
+            cout<<"Exit problem and return to main menu?(y/n)"<<endl;
+            cin>>endgame;
+            cout<<"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"<<endl;
                    }break;
 
         case 4:{
@@ -205,7 +227,11 @@ int main(int argc, char** argv) {
                     }
                 default:{
                     cout<<"Invalid Number"<<endl;
-                    endgame=false;
+                    
+            //to exit problem
+            cout<<"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"<<endl;
+            cout<<"Exit problem and return to main menu?(y/n)"<<endl;
+            cin>>endgame;
                 }
             }
         }break;
@@ -229,11 +255,17 @@ int main(int argc, char** argv) {
 
             //calculate magic date
             magcDt=month*day;
-            if(magcDt=year){
-                cout<<"This date is magic"<<endl;
-            }
-            else(cout<<"this date is not magic");
-            }break;
+            cout<<(magcDt==year?"This date is magic!":
+                "This date is not magic!")<<endl;
+            
+            //to exit problem
+            cout<<"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"<<endl;
+            cout<<"Exit problem and return to main menu?(y/n)"<<endl;
+            cin>>endgame;
+            cout<<"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"<<endl;
+                
+        
+        }break; 
         case 6:{
             cout<<endl<<"Solution to Gaddis 8thEd Chap4 Prob4"<<endl;
             cout<<endl<<"Areas of Rectangles"<<endl;
@@ -264,21 +296,85 @@ int main(int argc, char** argv) {
             //output which is greater, or if the areas are the same
             if(area1==area2){
                 cout<<"They are the same"<<endl;
-                return 0;
+                cout<<"Exiting problem and returning to main menu"<<endl;
 
             }
             else{
                 cout<<"The rectangle that has the greater area is "<<
-                        (area1>area2?"the first one!":"the second one!");
+                        (area1>area2?"the first one!":"the second one!")<<endl;
+                cout<<"Exiting problem and returning to main menu"<<endl;
+                
+            //to exit problem
+            cout<<"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"<<endl;
+            cout<<"Exit problem and return to main menu?(y/n)"<<endl;
+            cin>>endgame;
+            cout<<"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"<<endl;
+                
             }break;
+        }
+        case 7:{
+            //problem to solve
+		cout<<"Solution to Gaddis 8thEd chap4 prob9"<<endl;
+		cout<<"Change game"<<endl;
+		cout<<"-------------------------------------"<<endl;
+		
+		//Initialize and declare variables
+		float dollar=1;                              //Dollars worth
+		//cout<<"dollar="<<dollar<<endl;
+		float pennies=0.01,nickel=0.05,dime=0.10,quarter=0.25;//Worth
+		float nPen, nNic, nDim, nQtr;               //Number of coins
+		float ttlPen, ttlNic, ttlDim, ttlQtr;       //Total of each
+		float total;                                //Whole total
+		
+		
+		//input
+		cout<<"How many pennies? ";
+		cin>>nPen;
+		cout<<endl<<"How many nickels? ";
+		cin>>nNic;
+		cout<<endl<<"How many dimes? ";
+		cin>>nDim;
+		cout<<endl<<"How many quarters? ";
+		cin>>nQtr;
+		
+		//Calculate total
+		ttlPen=nPen*pennies;			//Total $ Pennies
+		//cout<<endl<<"ttlPen"<<ttlPen<<endl;		//Test input
+		ttlNic=nNic*nickel;				//Total $ nickel
+		//cout<<"ttlPen"<<ttlNic<<endl;			//Test
+		ttlDim=nDim*dime;				//Total $ dimes
+		//cout<<"ttlDim"<<ttlDim<<endl;			//test
+		ttlQtr=nQtr*quarter;                        //Total $ quarters
+		//cout<<"ttlQtr"<<ttlQtr<<endl;                 //test
+		total=ttlPen+ttlNic+ttlDim+ttlQtr;//Whole total
+		cout<<endl<<"-------------------------------------"<<endl;
+		cout<<"Your total: $"<<setprecision(2)<<fixed
+			<<showpoint<<total<<endl;
+		
+		//output
+		if(total==dollar){
+                    cout<<"Congrats you won"<<endl<<"You did it"<<endl;
+                    cout<<"Exiting problem and returning to main menu"<<endl;
+		}
+		else(cout<<"You are the weakest link, goodbye"<<endl);
+                cout<<"Exiting problem and returning to main menu"<<endl;
+                
+            //to exit problem
+            cout<<"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"<<endl;
+            cout<<"Exit problem and return to main menu?(y/n)"<<endl;
+            cin>>endgame;
+            cout<<"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"<<endl;
+                break;
         }
 
         default:{
-            cout<<endl<<"Exiting the program"<<endl;
+            //to exit problem
+            cout<<"Exiting game"<<endl;
             endgame=false;
         }
     }
     }while(endgame);
+    
     
 
             return 0;
